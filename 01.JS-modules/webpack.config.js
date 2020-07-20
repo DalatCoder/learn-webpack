@@ -12,9 +12,16 @@ const config = {
       { 
         use: "babel-loader", 
         test: /\.js$/ 
+      },
+      {
+        // Apply css-loader first => output => send to style-loader
+        // Apply from right to left 
+        use: ['style-loader', 'css-loader'],
+        test: /\.css$/
       }
     ] 
   }
 };
 
+module.exports = config;
 module.exports = config;
