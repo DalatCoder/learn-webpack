@@ -1,10 +1,19 @@
-const path = require('path');
+const path = require("path");
 
+// prettier-ignore
 const config = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, "build"),
+    filename: "bundle.js"
+  },
+  module: { 
+    rules: [
+      { 
+        use: "babel-loader", 
+        test: /\.js$/ 
+      }
+    ] 
   }
 };
 
