@@ -6,7 +6,8 @@ const config = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: 'build/'
   },
   module: { 
     rules: [
@@ -22,6 +23,17 @@ const config = {
           loader: 'css-loader'
         }),
         test: /\.css$/
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
+          { 
+            loader: 'url-loader',
+            // If images size less than 40kn, bundle it. Else create seperated file for image
+            options: { limit: 40000 }
+          },
+          'image-webpack-loader'
+        ]
       }
     ] 
   },
@@ -30,5 +42,4 @@ const config = {
   ]
 };
 
-module.exports = config;
 module.exports = config;
