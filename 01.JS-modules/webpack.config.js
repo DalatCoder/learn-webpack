@@ -1,4 +1,5 @@
 const path = require("path");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // prettier-ignore
 const config = {
@@ -16,11 +17,17 @@ const config = {
       {
         // Apply css-loader first => output => send to style-loader
         // Apply from right to left 
-        use: ['style-loader', 'css-loader'],
+        // use: ['style-loader', 'css-loader'],
+        loader: ExtractTextPlugin.extract({
+          loader: 'css-loader'
+        }),
         test: /\.css$/
       }
     ] 
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('style.css')
+  ]
 };
 
 module.exports = config;
