@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,7 +73,17 @@
 "use strict";
 
 
-__webpack_require__(2);
+var _big = __webpack_require__(4);
+
+var _big2 = _interopRequireDefault(_big);
+
+var _small = __webpack_require__(2);
+
+var _small2 = _interopRequireDefault(_small);
+
+__webpack_require__(3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var image = document.createElement('img');
 
@@ -101,10 +111,24 @@ exports.default = sum;
 /* 2 */
 /***/ function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module parse failed: /home/nth/Dev/learn-webpack/js_modules/assets/small.jpg Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type.\n(Source code omitted for this binary file)");
 
 /***/ },
 /* 3 */
+/***/ function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/* harmony default export */ exports["default"] = __webpack_require__.p + "f31304e4686f27c3ebda9a985cc091b3.jpg";
+
+/***/ },
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
